@@ -24,3 +24,20 @@ body {
     max-width: 120rem;
   }
 }
+
+.form-control {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.input-group-text {
+  font-size: 1.6rem;
+}
+
+.page-link {
+  font-size: 1.4rem;
+} 

@@ -1,0 +1,58 @@
+[
+  {
+    "product_name": "fancy red lighter",
+    "product_price": 35.0,
+    "product_image": "image-1.jpg",
+    "id": 1,
+    "category": "Items"
+  },
+  {
+    "product_name": "canon camera",
+    "product_price": 80.0,
+    "product_image": "image-2.jpg",
+    "id": 2,
+    "category": "Items"
+  },
+  {
+    "product_name": "queen perfume",
+    "product_price": 90.0,
+    "product_image": "image-4.jpg",
+    "id": 3,
+    "category": "Perfumes"
+  },
+  {
+    "product_name": "ice cream",
+    "product_price": 10.0,
+    "product_image": "image-3.jpg",
+    "id": 4,
+    "category": "Food"
+  },
+  {
+    "product_name": "men perfume",
+    "product_price": 70.0,
+    "product_image": "image-5.jpg",
+    "id": 5,
+    "category": "Perfumes"
+  },
+  {
+    "product_name": "fruit salad",
+    "product_price": 5.0,
+    "product_image": "image-6.jpg",
+    "id": 6,
+    "category": "Food"
+  },
+  {
+    "product_name": "legacy camera",
+    "product_price": 40.0,
+    "product_image": "image-7.jpg",
+    "id": 7,
+    "category": "Items"
+  },
+  {
+    "product_name": "honey perfume",
+    "product_price": 20.0,
+    "product_image": "image-8.jpg",
+    "id": 8,
+    "category": "Perfumes"
+  }
+]

@@ -1,6 +1,35 @@
 .product-card {
   background-color: $color-grey-light-1;
   border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+
+  &__label {
+    position: absolute;
+    background-color: #000;
+    color: white;
+    padding: 0 6rem;
+    transform: rotate(45deg);
+    top: 25px;
+    right: -47px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+
+    &-blue {
+      background-color: $blue-color;
+    }
+
+    &-green {
+      background-color: $green-color;
+    }
+
+    &-gold {
+      background-color: $gold-color;
+    }
+  }
 
   &__about-box {
     padding: 2rem;

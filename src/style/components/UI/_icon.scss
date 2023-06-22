@@ -1,0 +1,16 @@
+.icon {
+  background-color: $color-grey-light-1;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  fill: #000;
+  stroke: #000;
+  transition: $base-transition;
+
+  &.active,
+  &:hover {
+    background-color: $color-grey-light-2;
+    fill: white;
+    stroke: white;
+  }
+}
