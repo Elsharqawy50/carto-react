@@ -11,6 +11,28 @@ const FilterProducts = ({ onSearch }) => {
   const [activeSort, setActiveSort] = useState(1);
   const [searchInput, setSearchInput] = useState("");
 
+  const searchInputHandler = (e) => {
+    setSearchInput(e.target.value);
+    dispatch(ProductsActions.search(e.target.value));
+    setActiveSort(1);
+    onSearch();
+  };
+
+  const resetSortHandler = () => {
+    dispatch(ProductsActions.reset());
+    setActiveSort(1);
+  };
+
+  const sortIncreasePricesHandler = () => {
+    dispatch(ProductsActions.sort("increase"));
+    setActiveSort(2);
+  };
+
+  const sortDeceasePricesHandler = () => {
+    dispatch(ProductsActions.sort("decrease"));
+    setActiveSort(3);
+  };
+
   return (
     <div className="d-flex align-items-center justify-content-between px-3 mb-4">
       <Form.Group>
@@ -20,12 +42,7 @@ const FilterProducts = ({ onSearch }) => {
             type="text"
             placeholder="search title or category ..."
             aria-describedby="inputGroupPrepend"
-            onChange={(e) => {
-              setSearchInput(e.target.value);
-              dispatch(ProductsActions.search(e.target.value));
-              setActiveSort(1);
-              onSearch();
-            }}
+            onChange={searchInputHandler}
             value={searchInput}
           />
         </InputGroup>
@@ -34,24 +51,15 @@ const FilterProducts = ({ onSearch }) => {
       <div className="d-flex align-items-center gap-3">
         <UpDownIcon
           className={`${activeSort === 1 && "active"}`}
-          onClick={() => {
-            dispatch(ProductsActions.reset());
-            setActiveSort(1);
-          }}
+          onClick={resetSortHandler}
         />
         <UpIcon
           className={`${activeSort === 2 && "active"}`}
-          onClick={() => {
-            dispatch(ProductsActions.sort("increase"));
-            setActiveSort(2);
-          }}
+          onClick={sortIncreasePricesHandler}
         />
         <DownIcon
           className={`${activeSort === 3 && "active"}`}
-          onClick={() => {
-            dispatch(ProductsActions.sort("decrease"));
-            setActiveSort(3);
-          }}
+          onClick={sortDeceasePricesHandler}
         />
       </div>
     </div>

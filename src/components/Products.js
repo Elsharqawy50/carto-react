@@ -27,12 +27,20 @@ const Products = () => {
         )}
         {displayedData.length > 0 &&
           displayedData.map(
-            ({ id, product_name, product_price, product_image, category }) => (
-              <Col key={id} md={4}>
+            ({
+              id,
+              product_name,
+              product_price,
+              product_image,
+              category,
+              product_image_min,
+            }) => (
+              <Col key={id} xs={12} md={6} lg={4}>
                 <ProductCard
                   title={product_name}
                   price={product_price}
                   img={product_image}
+                  imgMin={product_image_min}
                   category={category}
                 />
               </Col>

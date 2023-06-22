@@ -17,6 +17,7 @@
     text-transform: capitalize;
     display: flex;
     justify-content: center;
+    z-index: 10;
 
     &-blue {
       background-color: $blue-color;

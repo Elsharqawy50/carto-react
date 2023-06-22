@@ -1,0 +1,9 @@
+.image-box {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+
+  img {
+    transition: $second-transition;
+  }
+}

@@ -1,6 +1,7 @@
 import Button from "./UI/Button";
+import ImgLoader from "./UI/ImgLoader";
 
-function ProductCard({ title, price, img, category }) {
+function ProductCard({ title, price, img, imgMin, category }) {
   return (
     <div className="product-card shadow mb-4">
       <span
@@ -14,7 +15,11 @@ function ProductCard({ title, price, img, category }) {
       >
         {category}
       </span>
-      <img src={`img/${img}`} loading="lazy" alt="product-card" className="d-block w-100" />
+      <ImgLoader
+        imgSrc={`img/${img}`}
+        minImgSrc={`url(img/${imgMin})`}
+        boxHeight={"280px"}
+      />
       <div className="product-card__about-box d-flex flex-column align-items-center gap-4">
         <h5 className="product-card__heading text-capitalize">{title}</h5>
         <div className="product-card__price">${price}</div>
