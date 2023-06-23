@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartIcon = ({onClick}) => {
+const CartIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -9,7 +9,6 @@ const CartIcon = ({onClick}) => {
       strokeWidth="1.5"
       stroke="#101d2c"
       className="w-6 h-6 cart__icon"
-      onClick={onClick}
     >
       <path
         strokeLinecap="round"

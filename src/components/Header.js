@@ -16,8 +16,8 @@ const Header = () => {
         <div className="header__box d-flex align-items-center justify-content-between">
           <div className="header__logo">Carto</div>
           <div className="position-relative d-flex align-items-center justify-content-center">
-            <button className="cart__btn bg-transparent border-0">
-              <CartIcon onClick={() => setShowCartItems((prev) => !prev)} />
+            <button onClick={() => setShowCartItems((prev) => !prev)} className="cart__btn bg-transparent border-0">
+              <CartIcon />
               <span className="cart__badge d-flex align-items-center justify-content-center position-absolute rounded-circle">
                 {cartItemsNumber}
               </span>

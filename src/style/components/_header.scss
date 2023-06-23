@@ -43,6 +43,13 @@
       width: 30vw;
       border-radius: 3px;
       z-index: 1000;
+      @media only screen and (max-width: 75em) {
+        width: 50vw;
+      }
+
+      @media only screen and (max-width: 45em) {
+        width: 80vw;
+      }
     }
 
     &__item-img {
