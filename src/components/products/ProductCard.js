@@ -1,7 +1,23 @@
-import Button from "./UI/Button";
-import ImgLoader from "./UI/ImgLoader";
+import Button from "components/UI/Button";
+import ImgLoader from "components/UI/ImgLoader";
+import { useDispatch } from "react-redux";
+import { CartItemsActions } from "store/CartItemsSlice";
 
-function ProductCard({ title, price, img, imgMin, category }) {
+function ProductCard({ title, price, img, imgMin, category, id }) {
+  const dispatch = useDispatch();
+
+  const addItemHandler = () => {
+    const addObj = {
+      title,
+      price,
+      img,
+      amount: 1,
+      id,
+    };
+
+    dispatch(CartItemsActions.addItem(addObj));
+  };
+
   return (
     <div className="product-card shadow mb-4">
       <span
@@ -24,7 +40,7 @@ function ProductCard({ title, price, img, imgMin, category }) {
         <h5 className="product-card__heading text-capitalize">{title}</h5>
         <div className="product-card__price">${price}</div>
         <div className="actions-box">
-          <Button>Add to cart</Button>
+          <Button onClick={addItemHandler}>Add to cart</Button>
         </div>
       </div>
     </div>

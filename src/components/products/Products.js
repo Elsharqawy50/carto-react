@@ -37,6 +37,7 @@ const Products = () => {
             }) => (
               <Col key={id} xs={12} md={6} lg={4}>
                 <ProductCard
+                  id={id}
                   title={product_name}
                   price={product_price}
                   img={product_image}
@@ -51,7 +52,7 @@ const Products = () => {
         page={page}
         between={4}
         total={productsData.length}
-        limit={6}
+        limit={itemsPerPage}
         changePage={(page) => {
           setPage(page);
         }}

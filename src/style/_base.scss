@@ -40,4 +40,17 @@ body {
 
 .page-link {
   font-size: 1.4rem;
-} 
+  color: $color-primary;
+
+  &:focus,
+  &:hover {
+    color: $color-primary;
+    box-shadow: none;
+  }
+}
+
+.active > .page-link {
+  color: $color-grey-light-1;
+  background-color: $color-primary;
+  border-color: $color-primary;
+}

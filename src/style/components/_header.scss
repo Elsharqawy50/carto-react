@@ -31,64 +31,62 @@
       height: 2rem;
       background-color: $warning-color;
     }
+
+    &__list {
+      list-style: none;
+      background-color: $color-grey-light-1;
+      padding: 2rem;
+      box-shadow: $secondary-shadow;
+      position: absolute;
+      top: 3rem;
+      right: -1rem;
+      width: 30vw;
+      border-radius: 3px;
+      z-index: 1000;
+    }
+
+    &__item-img {
+      height: 5rem;
+      display: block;
+      border-radius: 3px;
+    }
+
+    &__item-text {
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+
+    &__item-head {
+      font-size: 1.6rem;
+    }
+
+    &__item-amount {
+      color: $color-primary;
+    }
+
+    &__empty {
+      font-size: 1.4rem;
+    }
+  }
+
+  button {
+    font: inherit;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    width: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin: 0.25rem;
+
+    &:hover,
+    &:active {
+      background-color: $color-primary;
+      color: $color-grey-light-1;
+    }
   }
 }
-
-
-// .cart__list {
-//   list-style: none;
-//   background-color: $color-grey-light-1;
-//   padding: 2rem;
-//   position: absolute;
-//   box-shadow: $secondary-shadow;
-//   top: 3rem;
-//   right: -1rem;
-//   width: 30vw;
-//   display: flex;
-//   flex-direction: column;
-//   gap: 2rem;
-//   border-radius: 3px;
-// }
-
-// .cart__item {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   gap: 2rem;
-// }
-
-// .cart__item-img {
-//   height: 4rem;
-//   display: block;
-//   border-radius: 3px;
-// }
-
-// .cart__item-text {
-//   margin-right: auto;
-//   text-transform: capitalize;
-//   font-size: 1.4rem;
-//   line-height: 1.5;
-// }
-
-// .cart__item-head {
-//   font-size: 1.6rem;
-// }
-
-// .cart__btn-delete {
-//   background-color: transparent;
-//   border: none;
-//   cursor: pointer;
-//   font-size: 3rem;
-//   font-weight: 300;
-//   transition: $base-transition;
-// }
-
-// .cart__btn-delete:hover {
-//   color: $warning-color;
-// }
-
-// .cart_empty {
-//   text-align: center;
-//   font-size: 1.4rem;
-//   text-transform: capitalize;
-// }

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import UpIcon from "./icons/UpIcon";
-import DownIcon from "./icons/DownIcon";
-import UpDownIcon from "./icons/UpDownIcon";
+import UpIcon from "components/icons/UpIcon";
+import DownIcon from "components/icons/DownIcon";
+import UpDownIcon from "components/icons/UpDownIcon";
 import { useDispatch } from "react-redux";
-import { ProductsActions } from "../store/ProductsSlice";
+import { ProductsActions } from "store/ProductsSlice";
 import { Form, InputGroup } from "react-bootstrap";
 
 const FilterProducts = ({ onSearch }) => {
@@ -48,7 +48,7 @@ const FilterProducts = ({ onSearch }) => {
         </InputGroup>
       </Form.Group>
 
-      <div className="d-flex align-items-center gap-3">
+      <div className="d-flex align-items-center gap-2">
         <UpDownIcon
           className={`${activeSort === 1 && "active"}`}
           onClick={resetSortHandler}
